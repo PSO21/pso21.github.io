@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('https://i.postimg.cc/W1tfg990/1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+header {
+    width: 100%;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    font-family: 'Cinzel', serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    flex-grow: 1;
+}
+
+.class-box {
+    position: relative;
+    width: 200px;
+    height: 300px; /* Aumentado para dar espacio al botón */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.class-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.class-box .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+}
+
+.class-box:hover .overlay {
+    opacity: 1;
+}
+
+.class-box h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.class-box p {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+.class-box .more-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-family: 'Cinzel', serif;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.class-box .more-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+
+footer {
+    width: 100%;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+/* Ocultar el reproductor de audio */
+audio {
+    display: none;
+}
+
+/* Estilizar el botón de reproducción */
+button#play-audio {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-family: 'Cinzel', serif;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button#play-audio:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
